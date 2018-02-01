@@ -1,0 +1,64 @@
+@font-face {
+  font-family: Ailerons;
+  src: url(Ailerons-Typeface.otf);
+}
+body {
+  background-image: url(bgnew.jpg);
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
+  font-family: Ailerons;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+}
+
+.search {
+  padding: 30px;
+}
+
+input[type="text"] {
+  background: transparent;
+  color: #eff1f5;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #eff1f5;
+  width: 380px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button {
+  background-color: transparent;
+  color: #eff1f5;
+}
+
+h1 {
+  color: #eff1f5;
+  font-size: 72px;
+  padding: 30px;
+}
+
+.fa-eye {
+  color: #eff1f5;
+  padding: 30px;
+}
+
+#clock {
+  font-size: 72px;
+  color: #eff1f5;
+  padding: 30px;
+  letter-spacing: 4px;
+}
+
+@media (min-width: 970px) {
+  .container {
+    margin-top: 5%;
+    max-width: 800px;
+  }
+}
+
+
