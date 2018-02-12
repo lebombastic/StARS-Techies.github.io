@@ -1,97 +1,57 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <title>Home</title>
-    <meta name="description" content="home page">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!--Glyphs-->
-    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
-    
-    <!--Title Icon-->
-    <link rel="icon" type="image/png" href="eyewhite.svg">
+    <head>
+        <title>Home</title>
+        <meta name="description" content="home page">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- ======================== Styles ======================== -->
+        <!--Glyphs-->
+        <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 
-    <!--Bootstrap Alpha 4-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <!--Title Icon-->
+        <link rel="icon" type="image/png" href="./img/eyewhite.svg">
 
-    <!--Jquery 3.1.1-->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-
-    <!--Bootstrap Js-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-    <!--Animate-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
-    <!--Font-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-    <!-- Override Styles -->
-    <link rel="stylesheet" href="homepage.css">
-</head>
-
-<body>
-
-<div class="container">
-
-  <div class="row-centered">
-      
-    <div class="col-centered animated fadeInDownBig">
-      <h1>Welcome to the Internet</h1>
-    </div>
-
-    <div class="col-centered animated fadeInUp">
-      <i class="fa fa-eye fa-4x" aria-hidden="true"></i>
-    </div>
-
-  </div>
-
-</div>
+        <!--Bootstrap Alpha 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        
+        <!--Animate-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        
+        <!--Font-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        
+        <!-- Override Styles -->
+        <link rel="stylesheet" href="./styles/homepage.css">
 
 
-<div id="clock" class="animated fadeIn">
-    <div class="time row-centered"></div>
-</div> 
+        <!-- ======================== Scripts ======================== -->
+        <!--Jquery 3.1.1-->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 
-<script type="text/javascript">
-    window.onload = function() {
+        <!--Bootstrap Js-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-  clock();  
+        <!-- My scripts -->
+        <script src="./scripts/main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row-centered">
+                <div class="col-centered animated fadeInDownBig">
+                    <h1>Welcome to the Internet</h1>
+                </div>
 
-    function clock() {
-    var now = new Date();
-    var TwentyFourHour = now.getHours();
-    var hour = now.getHours();
-    var min = now.getMinutes();
-    var mid = 'pm';
-    if (min < 10) {
-      min = "0" + min;
-    }
+                <div class="col-centered animated fadeInUp">
+                    <i class="fa fa-eye fa-4x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
 
-    if (hour > 12) {
-      hour = hour - 12;
-    }
-      
-    if(hour==0){ 
-      hour=12;
-    }
-
-    if(TwentyFourHour < 12) {
-       mid = 'am';
-    }
-      
-    $('.time').text(hour+':'+min + mid);
-    setTimeout(clock, 1000);
-
-  }
-  
-
-  
-}
-</script>
-  
-</body>
-
+        <div id="clock" class="animated fadeIn">
+            <div class="time row-centered"></div>
+        </div>
+    </body>
 </html>
