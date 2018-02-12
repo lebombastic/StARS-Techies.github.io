@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Main grid (vertical, full page) */
+#grid-main {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-gap: 20px;
+    grid-template-areas:
+        "header" "nav" "filters"
+        "player" "list" "footer";
+}
+.grid-main-item {
+    padding: 20px;
+    border: 1px solid grey;
+}
+#grid-main-header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+#grid-main-nav {
+    grid-area: nav;
+}
+#grid-main-filters {
+    grid-area: filters;
+}
+#grid-main-player {
+    grid-area: player;
+}
+#grid-main-list {
+    grid-area: list;
+}
+#grid-main-footer {
+    grid-area: footer;
+}
+/* End: main grid */
+
+/* Header Grid */
+/* container = #grid-main-header */
+.grid-main-header-item {
+    border: 1px solid rgb(194, 88, 106);
+}
+#grid-main-header-title {
+    text-align: center;
+    font-size: 2em;
+}
+/* #grid-main-header-space {} */
+/* End: header grid */
+
+
+
+
+
+
+/* #grid-test-main {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-gap: 20px;
+    grid-template-areas: "header" "nav" "content" "footer";
+}
+
+.grid-test-item {
+    padding: 20px;
+    border: 2px solid grey;
+} */
