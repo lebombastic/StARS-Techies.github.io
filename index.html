@@ -1,60 +1,48 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
-        <title>Home</title>
-        <meta name="description" content="home page">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- ======================== Styles ======================== -->
-        <!--Glyphs-->
-        <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+        <title>Welcome to Firebase Hosting</title>
 
-        <!--Title Icon-->
-        <link rel="icon" type="image/png" href="./img/eyewhite.svg">
-
-        <!--Bootstrap Alpha 4-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        
-        <!--Animate-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        
-        <!--Font-->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        
-        <!-- Override Styles -->
-        <link rel="stylesheet" href="./styles/homepage.css">
-
-
-        <!-- ======================== Scripts ======================== -->
-        <!--Jquery 3.1.1-->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-
-        <!--Bootstrap Js-->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-        <!-- My scripts -->
-        <script src="./scripts/utils.js"></script>
-        <script src="./scripts/main-index.js"></script>
+        <link rel="stylesheet" href="https://cdn.plyr.io/2.0.7/plyr.css">
+        <link rel="stylesheet" href="https://cdn.plyr.io/2.0.7/demo.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.plyr.io/2.0.7/plyr.js"></script>
     </head>
     <body>
+        <h1>StARS Podcast!</h1>
         <div class="container">
-            <div class="row-centered">
-                <div class="col-centered animated fadeInDownBig">
-                    <h1>Welcome to the Internet</h1>
-                </div>
+            <!-- <video id="player" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" controls crossorigin> -->
+                <!-- Video files -->
+                <!-- <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.mp4" type="video/mp4"> -->
+                <!-- <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webm" type="video/webm"> -->
+            
+                <!-- Text track file -->
+                <!-- <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default> -->
+            
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <!-- <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.mp4" download>Download</a> -->
+            <!-- </video> -->
 
-                <div class="col-centered animated fadeInUp">
-                    <a href="./pages/podcast.html">
-                        <i id="link-to-podcast-page" class="fa fa-eye fa-4x" aria-hidden="true"></i>
-                    </a>
-                </div>
+            <!-- <div class="plyr__video-embed" id="player">
+                <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+            </div> -->
+
+            <audio id="player" controls>
+                <!-- <source src="https://archive.org/download/Test10sMp3/test10s.mp3" type="audio/mp3"> -->
+                <source src="https://archive.org/download/Test10sMp3/test10s.ogg" type="audio/ogg">
+            </audio>
+            
+            <div class="actions">
+                <button type="button" class="btn js-play">Play</button>
+                <button type="button" class="btn js-pause">Pause</button>
+                <button type="button" class="btn js-stop">Stop</button>
+                <button type="button" class="btn js-rewind">Rewind</button>
+                <button type="button" class="btn js-forward">Forward</button>
             </div>
         </div>
-
-        <div id="clock" class="animated fadeIn">
-            <div class="time row-centered"></div>
-        </div>
+        <!-- <script src="https://cdn.plyr.io/2.0.7/plyr.js"></script> -->
+        <script src="index.js"></script>
     </body>
 </html>
